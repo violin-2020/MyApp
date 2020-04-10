@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BoatInfoActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".BoatInfoActivity">
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/BoatInfo"
+                android:background="@drawable/selector_green_bg"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:onClick="BoatInfoClick"
+                android:text="信息" />
+
+            <Button
+                android:id="@+id/DcInfo"
+                android:background="@drawable/selector_green_bg"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:onClick="DcInfoClick"
+                android:text="电池" />
+
+            <TextView
+                android:id="@+id/viewMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#030303"
+                android:layout_marginTop="8dp"
+                android:text="" />
+
+        </TableRow>
+
+        <TableLayout
+            android:id="@+id/maintableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView>
+
+                <TableRow
+                    android:id="@+id/MaintableRow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/BoatMessage"
+                        android:textColor="#030303"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:singleLine="false"
+                        android:text=" " />
+                </TableRow>
+
+            </ScrollView>
+        </TableLayout>
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

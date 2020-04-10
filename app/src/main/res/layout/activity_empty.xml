@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmptyActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".EmptyActivity">
+
+        <TableLayout
+            android:id="@+id/maintableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+            <TableRow
+                android:id="@+id/MaintableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+            <Button
+                android:id="@+id/buttonList"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:hint="mark test"
+                android:visibility="gone"
+                android:onClick="buttonListClick"
+                android:text="List" />
+
+                <Button
+                    android:id="@+id/buttonPic"
+                    android:layout_width="50dp"
+                    android:layout_height="48dp"
+                    android:onClick="buttonPicClick"
+                    android:visibility="gone"
+                    android:text="PicList" />
+
+                <Button
+                    android:id="@+id/buttonAll"
+                    android:background="@drawable/selector_green_bg"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:onClick="buttonAllClick"
+                    android:text="显示" />
+
+                <Button
+                    android:id="@+id/NewMap"
+                    android:background="@drawable/selector_green_bg"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:onClick="NewMapClick"
+                    android:text="定位" />
+
+                <Button
+                    android:id="@+id/BoatInfo"
+                    android:background="@drawable/selector_green_bg"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:onClick="BoatInfoClick"
+                    android:text="信息" />
+
+                <Button
+                    android:id="@+id/BtnService"
+                    android:background="@drawable/selector_green_bg"
+                    android:layout_width="80dp"
+                    android:layout_height="48dp"
+                    android:onClick="ServiceClick"
+                    android:text="设置" />
+
+            </TableRow>
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text"
+                android:id="@+id/list"
+                >
+            </ListView>
+
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
