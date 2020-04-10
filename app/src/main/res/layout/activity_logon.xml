@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back1"
+    tools:context=".LogonActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:id="@+id/viewMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=" " />
+
+        <TextView
+            android:id="@+id/viewMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/strLogon" />
+
+        <EditText
+            android:id="@+id/editLogon"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/viewPass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/strPass" />
+
+        <EditText
+            android:id="@+id/editPass"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:singleLine="true"></EditText>
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/buttonLogon"
+                    android:background="@drawable/selector_green_bg"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:layout_marginTop="30dp"
+                    android:onClick="LogonClick"
+                    android:text="@string/strLogon2" />
+
+                <Button
+                    android:id="@+id/buttonReg"
+                    android:background="@drawable/selector_green_bg"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="50dp"
+                    android:onClick="RegClick"
+                    android:text="@string/strReg" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/viewHint"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text=" " />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
