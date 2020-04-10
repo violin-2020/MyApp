@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+        }
+        release {
+            keyAlias 'key0'
+            keyPassword '123456'
+            //storeFile file('F:/wl/java学习资料/androidkey/MyMapkey.jks')
+            storeFile file('F:/java/androidkey/MyMapkey.jks')
+            storePassword '123456'
+        }
+    }
+   compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.ruihua.map.secapp"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            //引用正式签名
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/json-lib-2.4-jdk15.jar')
+    implementation files('libs/json-lib-2.4-jdk15-sources.jar')
+}
